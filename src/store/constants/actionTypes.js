@@ -14,6 +14,11 @@ export const LOGOUT_REQUEST = "LOGOUT_REQUEST";
 export const LOGOUT_SUCCESS = "LOGOUT_SUCCESS";
 export const LOGOUT_FAIL = "LOGOUT_FAIL";
 
+//
+export const TOKEN_REQUEST = "TOKEN_REQUEST";
+export const TOKEN_SUCCESS = "TOKEN_SUCCESS";
+export const TOKEN_FAIL = "TOKEN_FAIL";
+
 export const OPTION_REQUEST = "OPTION_REQUEST";
 export const OPTION_SUCCESS = "OPTION_SUCCESS";
 export const OPTION_FAIL = "OPTION_FAIL";

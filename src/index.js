@@ -10,13 +10,12 @@ import "./styles/index.css";
 import { composeWithDevTools } from "redux-devtools-extension";
 import { getAccessToken } from "./store/actions/account";
 let buffer = [];
-const middleWareLogging = (store) => (next) => (action) => {
+const middleWareLogging = (store) => (next) => async (action) => {
   buffer.push(action);
   //const auth = store.getState().auth.isAuth;
   if (action.type === "REFRESH_TOKEN") {
-    store.dispatch(getAccessToken()).then(() => {
-      store.dispatch({ type: "TOKEN_REFRESHED" });
-    });
+    await store.dispatch(getAccessToken());
+    store.dispatch({ type: "TOKEN_REFRESHED" });
 
     let pos = buffer.map((e) => e.type).indexOf("REFRESH_TOKEN") - 1;
 

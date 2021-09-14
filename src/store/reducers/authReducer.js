@@ -5,6 +5,9 @@ import {
   LOGOUT_REQUEST,
   LOGOUT_SUCCESS,
   LOGOUT_FAIL,
+  TOKEN_REQUEST,
+  TOKEN_SUCCESS,
+  TOKEN_FAIL,
 } from "../constants/actionTypes";
 
 const initialState = {
@@ -37,6 +40,17 @@ export default (state = initialState, action) => {
       };
     case LOGOUT_FAIL:
       return state;
+    case TOKEN_FAIL:
+      return { ...state, authLoading: false, isAuth: false, username: null };
+    case TOKEN_REQUEST:
+      return { ...state, authLoading: true };
+    case TOKEN_SUCCESS:
+      return {
+        ...state,
+        authLoading: false,
+        isAuth: true,
+        username: action.payload.username,
+      };
     default:
       return state;
   }

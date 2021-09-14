@@ -5,6 +5,9 @@ import {
   LOGOUT_REQUEST,
   LOGOUT_SUCCESS,
   LOGOUT_FAIL,
+  TOKEN_FAIL,
+  TOKEN_REQUEST,
+  TOKEN_SUCCESS,
 } from "../constants/actionTypes";
 import * as api from "../../api/index.js";
 import { showNotification } from "../../functions/helper.js";
@@ -90,17 +93,17 @@ export const logoutAccount = () => async (dispatch) => {
 //refresh access Token
 export const getAccessToken = () => async (dispatch) => {
   try {
-    dispatch({ type: LOGIN_REQUEST });
+    dispatch({ type: TOKEN_REQUEST });
     const { data } = await api.refreshToken();
     const { success, detail } = data;
     const { token } = detail;
 
     if (success) {
       setHeaderAxios(token);
-      dispatch({ type: LOGIN_SUCCESS, payload: detail });
+      dispatch({ type: TOKEN_SUCCESS, payload: detail });
     }
   } catch (error) {
     setHeaderAxios(null);
-    dispatch({ type: LOGIN_FAIL });
+    dispatch({ type: TOKEN_FAIL });
   }
 };
