@@ -1,1 +1,0 @@
-wed: npm run start
