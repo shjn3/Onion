@@ -1,0 +1,58 @@
+:root {
+  --color-one: #9c27b0;
+  --color-two: #ffffff;
+}
+.title-table{
+  font-size: 16px;
+  font-weight: 600;
+}
+
+* {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-size: 1em;
+}
+
+.cursor-p {
+  cursor: pointer;
+}
+.saleCard {
+  color: inherit;
+}
+.saleCard:hover {
+  color: inherit;
+}
+
+.btnn {
+  padding: 15px 32px;
+  text-transform: uppercase;
+  border-radius: 6px;
+  border: 3px solid var(--color-one);
+  cursor: pointer;
+  transition: background-color 0.5s linear, color 0.5s ease-out,
+    transform 0.3s ease-out;
+}
+
+.btnn:hover {
+  transform: translateY(-5px);
+}
+
+.button-one {
+  background-color: var(--color-one);
+  color: var(--color-two);
+}
+
+.button-one:hover {
+  color: var(--color-one);
+  background-color: var(--color-two);
+}
+
+.button-two {
+  background-color: var(--color-two);
+  color: var(--color-one);
+}
+
+.button-two:hover {
+  background-color: var(--color-one);
+  color: var(--color-two);
+}

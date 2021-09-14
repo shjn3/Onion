@@ -1,0 +1,472 @@
+@import '~bootstrap/dist/css/bootstrap.min.css';
+@import '~antd/dist/antd.css'; 
+@import url(https://fonts.googleapis.com/css?family=Exo:100,200,400);
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:700,400,300);
+@import '~react-notifications/lib/notifications.css';
+@import './sidebar.css';
+@import '~bootstrap-material-design-icons/css/material-icons.css';
+@import './search.css';
+@import './spin.css';
+@import './card.css';
+@import './buttons.css';
+@import './bubble.css';
+@import './form.css';
+@import './header.css';
+body{
+	background:rgba(156,39,176,.075);
+}
+.body_login{
+	position: absolute;
+	top: -20px;
+	left: -20px;
+	right: -40px;
+	bottom: -40px;
+	width: auto;
+	height: auto;
+	background-image: url(http://ginva.com/wp-content/uploads/2012/07/city-skyline-wallpapers-008.jpg);
+	background-size: cover;
+	-webkit-filter: blur(5px);
+	z-index: 0;
+}
+.kilo_span{
+	width: 140px;
+	display: inline-block;
+}
+.size-16{
+	font-size: 16px;
+}
+*{
+	padding: 0;
+	margin: 0;
+}
+
+.size-14{
+	font-size: 14px;
+}
+
+.size-12{
+	font-size: 12px;
+}
+.size-10{
+	font-size: 10px;
+}
+.grad{
+	position: absolute;
+	top: -20px;
+	left: -20px;
+	right: -40px;
+	bottom: -40px;
+	width: auto;
+	height: auto;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.65))); /* Chrome,Safari4+ */
+	z-index: 1;
+	opacity: 0.7;
+}
+/*header*/
+.header{
+	position: absolute;
+	top: calc(50% - 35px);
+	left: calc(50% - 255px); 
+	z-index: 2;
+}
+
+.header div{
+	float: left;
+	color: #fff;
+	font-family: 'Exo', sans-serif;
+	font-size: 35px;
+	font-weight: 200;
+}
+
+.header div span{
+	color: #5379fa !important;
+}
+/*Login*/
+
+.auth__container{
+	display: flex;
+}
+.sign-up,.log-in{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 20px 0;
+	text-align: center;
+	border-radius: 5px;
+	background-color: rgba(255,255,255,1)
+
+}
+.sign-up>p,.log-in>p{
+	margin: 0;
+	
+}
+.login{
+	position: absolute;
+	top: calc(50% - 75px);
+	left: calc(50% - 50px);
+	height: 150px;
+	width: 350px;
+	padding: 10px;
+	z-index: 2;
+}
+
+.login input[type=text]{
+	width: 250px;
+	height: 30px;
+	background: transparent;
+	border: 1px solid rgba(255,255,255,0.6);
+	border-radius: 2px;
+	color: #fff;
+	font-family: 'Exo', sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	padding: 4px;
+}
+
+.login input[type=password]{
+	width: 250px;
+	height: 30px;
+	background: transparent;
+	border: 1px solid rgba(255,255,255,0.6);
+	border-radius: 2px;
+	color: #fff;
+	font-family: 'Exo', sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	padding: 4px;
+	margin-top: 10px;
+}
+
+.login input[type=button]{
+	width: 250px;
+	height: 35px;
+	background: #fff;
+	border: 1px solid #fff;
+	cursor: pointer;
+	border-radius: 2px;
+	color: #a18d6c;
+	font-family: 'Exo', sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	padding: 6px;
+	margin-top: 10px;
+}
+
+.login input[type=button]:hover{
+	opacity: 0.8;
+}
+
+.login input[type=button]:active{
+	opacity: 0.6;
+}
+
+.login input[type=text]:focus{
+	outline: none;
+	border: 1px solid rgba(255,255,255,0.9);
+}
+
+.login input[type=password]:focus{
+	outline: none;
+	border: 1px solid rgba(255,255,255,0.9);
+}
+
+.login input[type=button]:focus{
+	outline: none;
+}
+
+::-webkit-input-placeholder{
+   color: rgba(255,255,255,0.6);
+}
+
+::-moz-input-placeholder{
+   color: rgba(255,255,255,0.6);
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button{
+	-webkit-appearance: none;
+}
+
+/*notification*/
+.notification .cus-alert {
+	position: fixed;
+	top: 60px;
+	right: 0;
+	z-index: 9999;
+}
+
+/*main*/
+.main_wapper{ 
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	position:relative;
+}
+.main_container{
+	position:relative;
+	display: flex;
+	flex-direction: column;
+	transition: all 0.3s ease;
+	width: 100%;
+}
+
+
+
+.main_content{
+	width: 100%;
+	transition: all 0.3s ease;
+}
+
+.main_content{
+	flex:1;
+}
+.ant-menu-dark.ant-menu-inline, .ant-menu-dark.ant-menu-vertical, .ant-menu-dark.ant-menu-vertical-left, .ant-menu-dark.ant-menu-vertical-right {
+    height: calc(100% - 30px);
+}
+.ant-input:hover,
+.ant-input-number:hover,
+.ant-input-number:focus,
+.ant-input:focus,
+.ant-select:not(.ant-select-disabled):hover .ant-select-selector,
+.ant-select-focused:not(.ant-select-disabled).ant-select:not(.ant-select-customize-input) .ant-select-selector,
+.ant-input-number-focused{
+	border-color:rgb(156,39,176);
+}
+.ant-input:focus,.ant-input-number:focus,.ant-input-number-lg,
+.ant-select:not(.ant-select-disabled).ant-select:not(.ant-select-customize-input) .ant-select-selector
+{
+	box-shadow: 0 0 2px rgba(156,39,176);
+}
+.btn-check:focus+.btn, .btn:focus{
+	box-shadow: 0 0 0.25rem rgba(156,39,176);
+}
+.ant-select-item-option-selected:not(.ant-select-item-option-disabled){
+	background-color: rgba(156,39,176,.2);
+}
+
+/*card*/
+.card {
+    padding: 15px;
+    margin: 10px;
+    box-shadow: 0px 0px 4px rgb(156,39,176);
+}
+.title-card{
+	font-size: 24px;
+	font-weight: bold;
+}
+
+
+/*icon*/
+.iconCancel,
+.iconDelete{
+	font-size: 17px;
+}
+
+.iconCancel:hover{
+	transform:scale(1.33)
+}
+
+.iconDelete:hover{
+	transform:scale(1.33)
+}
+
+.itemCard:hover .btn-show-buy{
+	opacity: 1;
+}
+
+
+
+.itemCard:hover .btn-details{
+	opacity: 1;
+}
+.tab{
+	text-align: center;
+	cursor: pointer;
+	padding: 5px;
+	margin-bottom: 5px;	
+}
+.tab.active{
+	border-bottom:1px solid rgb(13,110,253);
+}
+
+.txt-center{
+	text-align: center;
+}
+
+.p-zero{
+padding: 0;
+}
+.hidden-bag-item{
+	opacity:0;
+	visibility:hidden;
+	position: absolute;
+}
+
+
+
+/*item buy card*/
+.itemCard{
+	display: flex;
+	flex-direction: column;
+	position:relative;
+	margin-bottom: 10px;
+	font-size: 14px;	
+}
+.buyCard__header,
+.driverCard__header{
+	background:rgba(156,39,176,1);
+	color:white;
+	text-align: end;
+	margin: 0 auto;
+	width: 100%;
+	border-radius: 0 10px  0 0;
+	padding: 4px;
+	position:relative;
+	overflow: hidden;
+}
+.buyCard__header--fullName,
+.driverCard__header--fullName{
+	font-size: 1.3rem;
+	font-weight: 600;
+	text-transform: capitalize;
+	padding-right:5px;
+}
+.buyCard__header--phoneNumber,
+.driverCard__header--phoneNumber{
+	font-weight: 400;
+	font-size: 1rem;
+	padding-right:5px;
+}
+.buyCard__header--index,
+.driverCard__header--index{
+	display:flex;
+	align-items: center;
+	justify-content: center;
+
+	position:absolute;
+	color: rgba(156,39,176,1);
+	top: -15%;
+	left: -10%;
+	background: white;
+	width:30%;
+	height: 120%;
+	border-radius: 0 50% 50% 0;
+	text-align:center;
+	font-size: 30px;
+	font-weight: bold;
+}
+
+.buyCard__main,
+.driverCard__main{
+	padding: 10px;
+	border:1px solid rgba(156,39,176,1);
+	border-bottom: 4px solid rgba(156,39,176,1);
+	border-top: 0;
+	margin: 0;
+	
+}
+.buyCard__main:hover,
+.driverCard__main:hover{
+	border:1px solid rgba(156,39,176,1);
+	border-bottom: 4px solid rgba(156,39,176,1);
+	border-top: 0px;
+
+}
+
+
+.buyCard__main--note,
+.driverCard__main--note{
+	height:60px;
+	width: 100%;
+	overflow-y:auto;
+	border: .5px solid #ccc;
+	padding: 5px;
+
+}
+.buyCard__main--note::-webkit-scrollbar,
+.driver__main--note::-webkit-scrollbar {
+    width: 5px;
+}
+
+.buyCard__main--note::-webkit-scrollbar-track,
+.driverCard__main--note::-webkit-scrollbar-track  {
+    -webkit-box-shadow: inset 0 0 6px rgb(255,255,255); 
+    border-radius: 10px;
+}
+
+.buyCard__main--note::-webkit-scrollbar-thumb,
+.driverCard__main--note::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+	background-color:rgb(156,39,176);
+}
+
+.buyCard__main--note__title,
+.driverCard__main--note__title{
+	display: block;
+	text-align:center;
+}
+.buyCard__main__tool--detail > a,.buyCard__main__tool--detail > button,
+.driverCard__main__tool--detail > a,.driverCard__main__tool--detail > button{
+	border-radius: 0;
+
+}
+.buyCard__main--btn,
+.driverCard__main--btn{
+	margin: 0;
+	border-top: 1px solid rgba(156,39,176,1);
+	padding: 0;
+}
+.buyCard__main--btn--detail,
+.driverCard__main--btn--detail{
+padding: 0;
+margin: 0;
+}
+.buyCard__main--btn--detail>.btn.btn-outline-onion,
+.driverCard__main--btn--detail>.btn.btn-outline-onion{
+	border-radius: 0;
+	display: block;
+	height: 100%;
+}
+/*buy card detail*/
+
+.buyDetail__result{
+	text-align: center;
+	padding-top:1rem;
+	padding-bottom: 1rem;
+	margin-left: 2rem;
+	margin-right: 2rem;
+	border-radius: 10px;
+	color:white;
+	
+}
+.buyDetail__result >div:nth-child(1){
+	font-size: 20px;
+ 
+}
+.buyDetail__result >div:nth-child(2){
+	font-size: 24px;
+	font-weight: bold;
+}
+.buyDetail__result--sum{
+
+	background: rgb(119,49,241);
+	box-shadow:0 0 8px rgba(119,49,241,.7);
+}
+.buyDetail__result--large{
+	background:rgb(41,202,191);
+	box-shadow:0 0 8px rgba(41,202,191,.7);
+}
+.buyDetail__result--medium{
+	background-color: rgb(58,106,240);
+	box-shadow:0 0 8px rgba(58,106,240,.7);
+				
+}
+.buyDetail__result--small{
+
+	background-color: rgb(44,49,70);
+	box-shadow:0 0 8px rgba(44,49,70,.7);
+				
+}
+
+.buyCard__main--note.buyDetail__main--bag{
+	height: 100px;
+}

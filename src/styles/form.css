@@ -1,0 +1,68 @@
+.form__container{
+	position: absolute;
+	top: calc(50% - 150px);
+	left: calc(50% - 50px);
+	min-width: 350px;
+	padding: 10px;
+	z-index: 2;
+    display: flex;
+    flex-direction: column;
+}
+.form__login{
+    margin-bottom: 20px;
+}
+.form__login>div{
+    background-color:white;
+    border-radius: 5px;
+    padding: 1.5rem 10px;
+}
+
+/*input*/
+
+.form--input{
+    position: relative;
+    width: 100%;
+    border: 1px solid #ccc;
+    margin: 5px 0;
+    padding:  10px;
+    border-radius: 5px;
+    
+
+}
+.form__login input[type="text"],.form__login input[type="password"]{
+    width: 100%;
+    border: 0;
+    outline: 0;
+    font-size: 14px;
+}
+
+.form--input >span{
+    position: absolute;
+    transform-origin: left;
+    color: #8e8e8e;
+}
+.focus.form--input >span{
+        transform:scale(.8) translateY(-17px);
+}
+.focus.form--input>input{
+    font-size:12px;
+}
+.border-inputFocus .form--input{
+    border:1px solid #a8a8a8;
+}
+/*form button*/
+.form--btn{
+    display: flex;
+    margin-top: 1.5rem;
+}
+
+.btn-submit{
+    width: 100%;
+    border-radius: 5px;
+    background-color: rgba(156,39,176,.5);
+    color: white;
+}
+.btn-submit:hover{
+    background-color: rgba(156,39,176);
+    color: white;
+}

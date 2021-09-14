@@ -1,0 +1,86 @@
+.btn{
+    border-radius: 20px;
+}
+.btn-details{
+	position:absolute;
+	bottom: 0;
+	left: -1px;
+
+	transform:translateY(97%);
+	width: calc(100% + 2px);
+	opacity: 0;
+}
+.btn-details a{
+display: block;
+border-radius: 0 0 5px 5px;
+}
+
+
+.btn-show-buy{
+	position:absolute;
+	bottom: 0;
+	left:-1px;
+	transform: translateY(97%);
+	width: calc(100% + 2px);
+	display:flex;
+	align-items: stretch;
+	opacity: 0;
+}
+
+.btn-show-buy a{
+	font-size: 14px;
+	flex:1;	
+}
+.btn-show-buy a:nth-child(1){
+	border-radius: 0 0 0 5px;
+}
+.btn-show-buy a:nth-child(2){
+	border-radius: 0 0 5px 0;
+}
+
+.btn-outline-onion{
+    color:rgba(156,39,176);
+    border: 1px solid rgba(156,39,176);
+    background: white;
+}
+.btn-outline-onion:hover{
+    color:white;
+    background-color:  rgba(156,39,176);
+    box-shadow: 0 2px 3px rgba(156,39,176);
+
+}
+.btn-show-buy .btn-outline-onion:hover{
+    border-radius: 2px;
+    color:rgba(156,39,176); 
+    transform:scale(1.2);  
+    background-color: white;
+}
+
+.btn-onion{
+    color:white;
+    border: 1px solid rgba(156,39,176);
+    background: rgba(156,39,176);  
+}
+.btn-onion:hover{
+    color:white;
+    border:1px solid rgb(128, 16, 148);
+    background-color:rgb(128, 16, 148);
+    box-shadow: 0 2px 3px rgba(156,39,176);
+}
+.btn-show-buy .btn-onion:hover{
+    border-radius: 2px;
+}
+
+.btn-logout{
+    border-radius: 0px;
+    background-color: transparent;
+    position: relative;
+    z-index: 2;
+    border: 0;
+}
+
+@media only screen and (max-width:800px){
+    .btn--goback{
+        display:none;
+    }
+}
