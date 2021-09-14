@@ -3,7 +3,7 @@ const api = {
   local: "http://localhost:5000",
   heroku: "https://backendonion.herokuapp.com",
 };
-const url = api.local;
+const url = api.heroku;
 
 //ACCOUNT
 export const login = (user) => axios.post(url + "/users/login", user);
