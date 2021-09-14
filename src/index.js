@@ -12,7 +12,6 @@ import { getAccessToken } from "./store/actions/account";
 let buffer = [];
 const middleWareLogging = (store) => (next) => (action) => {
   buffer.push(action);
-  console.log(action);
   //const auth = store.getState().auth.isAuth;
   if (action.type === "REFRESH_TOKEN") {
     store.dispatch(getAccessToken()).then(() => {
@@ -27,7 +26,6 @@ const middleWareLogging = (store) => (next) => (action) => {
           type: "RESEND",
           action: buffer[i](store.dispatch),
         });
-        console.log(i);
         break;
       }
     }
@@ -39,7 +37,7 @@ const middleWareLogging = (store) => (next) => (action) => {
 const store = createStore(
   reducers,
   composeWithDevTools(
-    applyMiddleware(thunk, middleWareLogging)
+    applyMiddleware(middleWareLogging, thunk)
     // other store enhancers if any
   )
 );

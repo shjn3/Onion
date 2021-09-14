@@ -73,7 +73,6 @@ const FormRegister = () => {
           <form
             className="d-flex flex-column"
             onSubmit={(e) => {
-              console.log(e.code);
               if (e.code === "Enter") e.preventDefault();
             }}
           >

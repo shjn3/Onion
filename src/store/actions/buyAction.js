@@ -20,12 +20,12 @@ import {
 } from "../constants/actionTypes";
 import * as api from "../../api/index.js";
 import { showNotification } from "../../functions/helper.js";
+import axios from "axios";
 
 //BUY action
 //get list BUY
 
 export const getListBuy = () => async (dispatch) => {
-
   dispatch({ type: GET_LIST_BUY_REQUEST });
   await api
     .listBuy()

@@ -77,7 +77,6 @@ const FormCreateDetailBuy = (props) => {
 
   //update a buy detail
   const onEdit = (info) => {
-    console.log(info);
     dispatch(editBuyDetail(id, itemBuyDetail._id, info));
     handleCancel();
   };
@@ -85,7 +84,6 @@ const FormCreateDetailBuy = (props) => {
   // choose create or update a buy detail
   const handleFinishFormCreate = (info) => {
     if (!isShowModalCreateCustomer) {
-      console.log(info);
       if (totalBag.length === 0) {
         return showNotification({
           type: "error",

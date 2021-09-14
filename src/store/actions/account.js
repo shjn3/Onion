@@ -54,7 +54,6 @@ export const registerAccount = (user) => async (dispatch) => {
       });
     }
   } catch (error) {
-    console.log(error);
     dispatch({ type: LOGIN_FAIL, message: "FAIL REGISTER" });
     setHeaderAxios(null);
     showNotification({
