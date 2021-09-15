@@ -58,13 +58,6 @@ const sideBar = [
     url: ["buy", "buyCustomer", "buyCustomerDetail", "buyDetail"],
   },
   {
-    id: 2,
-    title: "Bán Hàng",
-    icon: "person",
-    link: "/sale",
-    url: ["sale"],
-  },
-  {
     id: 3,
     title: "Tài xế",
     icon: "drive_eta",
@@ -72,3 +65,11 @@ const sideBar = [
     url: ["driver", "driverDetail"],
   },
 ];
+
+/*{
+    id: 2,
+    title: "Bán Hàng",
+    icon: "person",
+    link: "/sale",
+    url: ["sale"],
+  }, */

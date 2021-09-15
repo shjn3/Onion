@@ -14,7 +14,7 @@ const App = () => {
   }, [dispatch]);
   let body;
 
-  if (0) {
+  if (authLoading) {
     body = (
       <>
         <div style={{ height: "100vh" }}>
